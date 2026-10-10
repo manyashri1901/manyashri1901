@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="256" viewBox="0 0 490 256">
+<style>
+  text { font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .k { font-weight: 700; }
+  .v { fill: #c9d1d9; }
+  .a { opacity: 0; animation: in .45s ease-out forwards; }
+  @keyframes in { from { opacity: 0; transform: translateX(-8px); }
+                  to   { opacity: 1; transform: translateX(0); } }
+</style>
+<rect width="490" height="256" rx="10" fill="#0d1117" stroke="#30363d"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f56"/><circle cx="42" cy="20" r="6" fill="#ffbd2e"/><circle cx="62" cy="20" r="6" fill="#27c93f"/>
+<text x="24" y="50" fill="#39d353" style="font-weight:700">manyashri1901@github</text>
+<g class="r a" style="animation-delay:0.4s"><text x="24" y="70" class="k" fill="#58a6ff">Now</text><text x="110" y="70" class="v">Your current role / what you&#x27;re studying</text></g><g class="r a" style="animation-delay:0.65s"><text x="24" y="96" class="k" fill="#d2a8ff">Prev</text><text x="110" y="96" class="v">Previous role, internship or education</text></g><g class="r a" style="animation-delay:0.9s"><text x="24" y="122" class="k" fill="#39d353">Stack</text><text x="110" y="122" class="v">Python, JavaScript, SQL, Git</text></g><g class="r a" style="animation-delay:1.15s"><text x="24" y="148" class="k" fill="#ffa657">Focus</text><text x="110" y="148" class="v">What you&#x27;re learning or building</text></g><g class="r a" style="animation-delay:1.4s"><text x="24" y="174" class="k" fill="#ff7b72">Highlight</text><text x="110" y="174" class="v">One project or achievement you&#x27;re proud of</text></g><g class="r a" style="animation-delay:1.65s"><text x="24" y="200" class="k" fill="#79c0ff">Reach</text><text x="110" y="200" class="v">your@email.com</text></g>
+</svg>
