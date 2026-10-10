@@ -7,12 +7,14 @@ from html import escape
 # ---- EDIT THESE -----------------------------------------------------------
 USER = "manyashri1901"
 CARD = [
-    ("Now", "Your current role / what you're studying"),
-    ("Prev", "Previous role, internship or education"),
-    ("Stack", "Python, JavaScript, SQL, Git"),
-    ("Focus", "What you're learning or building"),
-    ("Highlight", "One project or achievement you're proud of"),
-    ("Reach", "your@email.com"),
+    ("Now", "CS undergrad @ VIT, class of 2027"),
+    ("Open to", "PM, consulting, cloud, SWE, analytics"),
+    ("Build", "Data platforms, risk tools, blockchain"),
+    ("Stack", "Python, SQL, TypeScript, FastAPI, React"),
+    ("Data", "Pandas, Power BI, Plotly, PostgreSQL"),
+    ("Ship", "GitHub Actions CI, pytest, Hardhat"),
+    ("Lead", "VIT Blockchain Community, core committee"),
+    ("Find me", "linkedin.com/in/manya-shrivastava1901"),
 ]
 # ---------------------------------------------------------------------------
 
