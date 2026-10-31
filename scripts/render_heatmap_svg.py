@@ -11,7 +11,7 @@ PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 CELL, GAP = 13, 3
 STEP = CELL + GAP
 LEFT, TOP = 40, 56
-W = 860
+RIGHT_PAD = 24
 
 
 def level_for(day):
@@ -27,6 +27,11 @@ def main():
 
     first = date.fromisoformat(days[0]["date"])
     offset = (first.weekday() + 1) % 7  # Sunday-first rows
+
+    # FIX: size the canvas from the real number of week columns so the newest
+    # weeks are never clipped (53 columns need more than the old fixed 860px).
+    ncols = (len(days) + offset + 6) // 7
+    W = LEFT + ncols * STEP + RIGHT_PAD
 
     rects, months = [], []
     last_month = None
@@ -44,8 +49,16 @@ def main():
         m = d["date"][5:7]
         if row == 0 and m != last_month:
             label = date.fromisoformat(d["date"]).strftime("%b")
-            months.append(f'<text x="{x}" y="{TOP - 10}" class="t">{label}</text>')
+            # FIX: if the first (partial) month label sits right next to the
+            # second one ("OctNov"), drop the first so they don't overlap.
+            if len(months) == 1 and x - months[0][0] < 3 * STEP:
+                months.pop()
+            months.append((x, label))
             last_month = m
+
+    month_labels = "".join(
+        f'<text x="{x}" y="{TOP - 10}" class="t">{label}</text>' for x, label in months
+    )
 
     day_labels = "".join(
         f'<text x="8" y="{TOP + r * STEP + 11}" class="t">{n}</text>'
@@ -76,7 +89,7 @@ def main():
 </style>
 <rect width="{W}" height="{H}" rx="10" fill="#0d1117" stroke="#30363d"/>
 <text x="{LEFT}" y="24" class="h">{user}@github ~ $ contributions --last-year</text>
-{''.join(months)}
+{month_labels}
 {day_labels}
 {''.join(rects)}
 <text x="{LEFT}" y="{grid_bottom + 24}" class="t">{footer}</text>
