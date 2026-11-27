@@ -27,7 +27,7 @@
 <br><br>
 
 <h3><code>manyashri1901@github ~ $ cat open-to.txt</code></h3>
-<img src="./assets/open-to.svg" width="860" alt="Open to: Product Management, Consulting, Cloud, Software Engineering, Data and Analytics, Management" />
+<img src="./assets/open-to.svg" width="860" alt="Open to: Software Engineering , DevOps , Consulting " />
 
 <br>
 
